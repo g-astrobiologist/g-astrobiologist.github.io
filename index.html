@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌌 Adam Radvanyi - The Gastrobiologist</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+  <style>
+    :root {
+      --bg-light: #f8f8f8;
+      --bg-dark: #121212;
+      --text-light: #333;
+      --text-dark: #eee;
+      --card-light: #fff;
+      --card-dark: #1e1e1e;
+      --accent: #222;
+      --accent-hover: #444;
+    }
+
+    [data-theme="dark"] {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+    [data-theme="dark"] header,
+    [data-theme="dark"] nav {
+      background-color: #000;
+      color: var(--text-dark);
+    }
+    [data-theme="dark"] section {
+      background-color: var(--card-dark);
+      color: var(--text-dark);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    header, nav {
+      background: #111;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+    }
+    .theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      color: inherit;
+      border: 2px solid currentColor;
+      border-radius: 5px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+      background: var(--card-light);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    button, a.button {
+      background-color: var(--accent);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    button:hover, a.button:hover {
+      background-color: var(--accent-hover);
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      margin: 2rem 0;
+    }
+  </style>
+  <script async defer data-website-id="YOUR_UMAMI_WEBSITE_ID" src="https://your-umami-instance.com/script.js"></script>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <header>
+    <h1>Hi, I'm Adam</h1>
+    <p>Data scientist, evolutionary biologist, lover of sci-fi and stars.</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#talks">Talks</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I use machine learning and statistics to explore the universe, both biological and astronomical. I'm currently working on intelligent systems and knowledge networks at MOME, and I love communicating complex ideas in simple ways.</p>
+      <a href="https://www.linkedin.com/in/%C3%A1d%C3%A1m-radv%C3%A1nyi-aa32b0214/" class="button" target="_blank" onclick="umami.track('linkedin-click')">My LinkedIn</a>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p><strong>Astronomy meets Data Visualization:</strong> We published a Nature Communications article featuring stellar surface reconstructions using our design and data pipeline at MOME.</p>
+      <a href="https://mome.hu/hu/hirek/mome-adatvizualizacioval-keszult-csillagaszati-publikacio-jelent-meg-a-nature-communications-ben" class="button" target="_blank" onclick="umami.track('project-article-click')">Read the Article</a>
+      <a href="https://www.youtube.com/watch?v=T0VGzGRBOqY" class="button" target="_blank" onclick="umami.track('project-video-click')">Watch the Video</a>
+    </section>
+
+    <section id="talks">
+      <h2>Talks & Media</h2>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=5xzS6qjgGbI" target="_blank" onclick="umami.track('day-in-life-video')">A Day in the Life at MOME</a></li>
+        <li><a href="https://mome.hu/hu/emerging-technology-conference-2024" target="_blank" onclick="umami.track('emtech-conference')">Emerging Tech Conference 2024 – MOME</a></li>
+        <li><a href="https://www.youtube.com/watch?v=GJrhrEshgs8&t=7703s" target="_blank" onclick="umami.track('mome-conference-talk')">Tech Talk – MOME Conference</a></li>
+        <li><a href="https://www.youtube.com/watch?v=PXkRJDOM2Ik" target="_blank" onclick="umami.track('science-comm-talk')">On Science Communication</a></li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Feel like collaborating or chatting about sci-fi, stats, or stardust?</p>
+      <button onclick="trackContact()">Get in Touch</button>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Adam R. – Made with coffee & stardust.
+  </footer>
+
+  <script>
+    function trackContact() {
+      alert('Thanks for reaching out! I will respond soon.');
+      if (typeof umami !== 'undefined') {
+        umami.track('contact-button-clicked');
+      }
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+  </script>
+</body>
+</html>
