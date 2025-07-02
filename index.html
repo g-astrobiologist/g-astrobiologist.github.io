@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🌌 Adam Radvanyi - The Gastrobiologist</title>
+  <title>🌌 The G_astrobiologist - Adam Radvanyi</title>
+  <meta name="description" content="Ádám Radványi, PhD – Data scientist, evolutionary biologist, science communicator. The 'G_astrobiologist'">
+  <meta name="author" content="Ádám Radványi, PhD">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+
   <style>
     :root {
       --bg-light: #f8f8f8;
@@ -68,13 +72,45 @@
       margin: 2rem auto;
       padding: 0 1rem;
     }
-    section {
+        section {
       margin-bottom: 2rem;
+    }
+    .card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
       background: var(--card-light);
-      padding: 1.5rem;
+      color: inherit;
       border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: background 0.3s ease, color 0.3s ease;
+      transition: background 0.3s ease;
+      flex-wrap: wrap;
+    }
+    .card-content {
+      flex: 1 1 300px;
+      min-width: 0;
+    }
+    .card img {
+      width: 300px;
+      height: auto;
+      border-radius: 0px;
+      margin-left: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .card img {
+        /* margin: 0 0 0.5rem 0; */
+        align-self: center;
+        padding-top: 1rem;
+        width: 100%;
+        margin-left: 0;
+      }
     }
     button, a.button {
       background-color: var(--accent);
@@ -96,11 +132,14 @@
       color: #aaa;
       margin: 2rem 0;
     }
+    ul {
+      padding-left: 1.2rem;
+    }
   </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="aeecf3d5-eeaf-45de-bd90-1e0c0871d114"></script>
 </head>
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <!-- <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button> -->
   <header>
     <h1>Hi, I'm Adam</h1>
     <p>Data scientist, evolutionary biologist, lover of sci-fi and stars.</p>
@@ -116,46 +155,110 @@
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>I use machine learning and statistics to explore the universe, both biological and astronomical. I'm currently working on intelligent systems and knowledge networks at MOME, and I love communicating complex ideas in simple ways.</p>
-      <a href="https://www.linkedin.com/in/%C3%A1d%C3%A1m-radv%C3%A1nyi-aa32b0214/" class="button" target="_blank" onclick="umami.track('linkedin-click')">My LinkedIn</a>
+      <div class="card">
+        <div class="card-content">
+          <p>I love to explore and to help understand things in the universe using statistics, machine learning, and creative data storytelling. I currently lead the data team at MOME, developing knowledge platforms, internal tools, and participating science outreach whenever possible.</p>
+          <a href="https://www.linkedin.com/in/g-astrobiologist" class="button" target="_blank" onclick="umami.track('linkedin-click')">LinkedIn</a>
+          <a href="https://www.youtube.com/watch?v=5xzS6qjgGbI" class="button" target="_blank" onclick="umami.track('intro-click')">Video</a>
+          <a href="assets/AdamRadvanyiG-astrobiologist_CV.pdf" class="button" target="_blank" onclick="umami.track('cv-click')">CV</a>
+          <!-- <a href=" -->
+        </div>
+        <img src="assets/profile.jpg" alt="Adam Radvanyi portrait"/>
+      </div>
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
-      <p><strong>Astronomy meets Data Visualization:</strong> We published a Nature Communications article featuring stellar surface reconstructions using our design and data pipeline at MOME.</p>
-      <a href="https://mome.hu/hu/hirek/mome-adatvizualizacioval-keszult-csillagaszati-publikacio-jelent-meg-a-nature-communications-ben" class="button" target="_blank" onclick="umami.track('project-article-click')">Read the Article</a>
-      <a href="https://www.youtube.com/watch?v=T0VGzGRBOqY" class="button" target="_blank" onclick="umami.track('project-video-click')">Watch the Video</a>
+      <h2>Highlighted Projects</h2>
+      <div class="card">
+        <div class="card-content">
+          <h3>Constellation (2025)</h3>
+          <p>Leveraging the MTMT publication and creative artwork database, we built an interactive visualization dashboard that reveals the sprawling collaboration network of MOME (Moholy-Nagy University of Art & Design).</p>
+          <p>To push the boundaries further, we crafted a 3D version—visually inspired by the galaxy map from Elite Dangerous—offering a cosmic perspective on academic and creative connections.</p>
+          <a href="https://home.data-vizart.mome.hu" class="button" target="_blank" onclick="umami.track('constellation-dashboard-click')">Explore</a>
+        </div>
+        <img src="assets/constellation.jpg" alt="Project constellation visualization" />
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>IMDb Competency Map (2025)</h3>
+          <p>Ever wondered if a person's skills and expertise could be mapped into vector space to enable intelligent matchmaking for collaborations? We did too.</p>
+          <p>Our pilot explored that very idea using the IMDb dataset—mining movie and crew metadata to build a prototype of a "competency map." By experimenting with graph neural networks and fine-tuning SentenceTransformers models (MPNet), we turned raw textual role data into meaningful embeddings that reflect not just what someone did, but how they fit into a wider network of expertise.</p>
+          <a href="assets/semantic_space_research_adamradvanyi.pdf" class="button" target="_blank" onclick="umami.track('competencymap-research-click')">Pilot</a>
+        </div>
+        <img src="assets/competencymap.jpg" alt="Project constellation visualization" />
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>XX Trianguli: The most spotted star in the sky (2024)</h3>
+          <p>Collaborated with astronomers on a Nature Communications publication, producing 3D models and visual storytelling assets about stellar surface activity in a chaotic dynamo system.</p>
+          <p>The article landed in the 99th percentile (top 1%) of all Altmetric-tracked papers and ranked #61 out of 2,438 Nature Communications articles of the same age. It was named one of Nature’s Top 25 Physics Papers of 2024 — sparking international press coverage, social media traction, and academic follow-ups. </p>
+          <p>Thanks to <a href="https://konkoly.hu/munkatarsak/kovari-zsolt" target="_blank">Zsolt Kővári</a> and <a href="https://www.linkedin.com/in/vikvarga" target="_blank">Viktor Varga</a> for making this project possible and awesome!</p>
+          <a href="https://www.aip.de/en/news/xx-tri-star-spots-chaotic-dynamo/" class="button" target="_blank" onclick="umami.track('xxtri-article-click')">Read the Article</a>
+          <a href="https://www.youtube.com/watch?v=T0VGzGRBOqY" class="button" target="_blank" onclick="umami.track('xxtri-video-click')">Watch the Video</a>
+          <a href="https://www.youtube.com/shorts/E-b9W-Kjqo4" class="button" target="_blank" onclick="umami.track('xxtri-short-click')">Watch the Short</a>
+        </div>
+        <img src="assets/xxtrianguli.jpg" alt="Starspot 3D visualization" />
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>Corpus analysis of the Buddhist monk Taixu (2024)</h3>
+          <p>In collaboration with sinologist <a href="https://www.linkedin.com/in/peter-boros-a14655151" target="_blank">Peter Boros</a> we applied natural language processing to examine Chinese philosophical discourse in the writings of Taixu (太虛大師; 1890–1947). I led the development of a custom text mining pipeline to uncover linguistic patterns and conceptual shifts across a carefully curated corpus of modern Buddhist literature.</p>
+          <a href="https://radvanyimome.github.io/Taixu-figures/" class="button" target="_blank" onclick="umami.track('taixu-page-click')">Visit the Page</a>
+        </div>
+        <img src="assets/taixu.jpg" alt="Taixu portrait" />
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>ReConnect China: A co-publication and co-patenting analysis (2023)</h3>
+          <p>As part of the Horizon Europe initiative, I collaborated with the Centre for Social Innovation to investigate the evolving landscape of EU–China research collaboration. My role focused on large-scale bibliometric and network analysis, mapping scientific co-authorship and patenting trends using the Web of Science and the 2023 PATSTAT release.</p>
+        </div>
+        <img src="assets/zsi.jpg" alt="Taixu portrait" />
+      </div>
     </section>
+
 
     <section id="talks">
       <h2>Talks & Media</h2>
       <ul>
         <li><a href="https://www.youtube.com/watch?v=5xzS6qjgGbI" target="_blank" onclick="umami.track('day-in-life-video')">A Day in the Life at MOME</a></li>
         <li><a href="https://mome.hu/hu/emerging-technology-conference-2024" target="_blank" onclick="umami.track('emtech-conference')">Emerging Tech Conference 2024 – MOME</a></li>
-        <li><a href="https://www.youtube.com/watch?v=GJrhrEshgs8&t=7703s" target="_blank" onclick="umami.track('mome-conference-talk')">Tech Talk – MOME Conference</a></li>
+        <li><a href="https://www.youtube.com/watch?v=GJrhrEshgs8&t=7703s" target="_blank" onclick="umami.track('famelab-big-talk')">FameLab 2021 Talk</a></li>
         <li><a href="https://www.youtube.com/watch?v=PXkRJDOM2Ik" target="_blank" onclick="umami.track('science-comm-talk')">On Science Communication</a></li>
       </ul>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Feel like collaborating or chatting about sci-fi, stats, or stardust?</p>
-      <button onclick="trackContact()">Get in Touch</button>
-    </section>
-  </main>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Feel like collaborating or chatting about sci-fi, stats, or stardust?</p>
+    <button onclick="trackContact()">Get in Touch</button>
+    <p id="obfuscatedContactString" style="display: none;">
+      <a class="stringmail"
+            data-user="iynavdar.tsigoloibortsa.g"
+            data-domain="moc.liamg"
+            href="mailto:%67%2E%61%73%74%72%6F%62%69%6F%6C%6F%67%69%73%74%2E%72%61%64%76%61%6E%79%69%40%67%6D%61%69%6C%2E%63%6F%6D">
+      </a>
+    </p>
+  </section>
 
   <footer>
-    &copy; 2025 Adam R. – Made with coffee & stardust.
+    &copy; 2025 Adam Radvanyi, the g_astrobiologist. Made with pre-workout, stardust & creative creatine. This page uses Umami for analytics.
   </footer>
+
+  <style>
+    .stringmail:before {
+      content: attr(data-domain) "\0040" attr(data-user);
+      unicode-bidi: bidi-override;
+      direction: rtl;
+    }
+  </style>
 
   <script>
     function trackContact() {
-      alert('Thanks for reaching out! I will respond soon.');
+      document.getElementById("obfuscatedContactString").style.display = "block";
       if (typeof umami !== 'undefined') {
         umami.track('contact-button-clicked');
       }
     }
-
     function toggleTheme() {
       const html = document.documentElement;
       const current = html.getAttribute('data-theme');
