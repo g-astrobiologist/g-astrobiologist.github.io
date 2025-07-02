@@ -6,6 +6,9 @@
   <title>🌌 The G_astrobiologist - Adam Radvanyi</title>
   <meta name="description" content="Ádám Radványi, PhD – Data scientist, evolutionary biologist, science communicator. The 'G_astrobiologist'">
   <meta name="author" content="Ádám Radványi, PhD">
+  <meta property="og:image" content="https://g-astrobiologist.github.io/assets/profile.jpg">
+  <meta property="og:title" content="The G_astrobiologist – Adam Radvanyi, PhD">
+  <meta property="og:description" content="Data scientist, evolutionary biologist, and science storyteller, astrobiologist wannabe.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
 
@@ -153,8 +156,8 @@
   </nav>
 
   <main>
-    <section id="about">
-      <h2>About Me</h2>
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
       <div class="card">
         <div class="card-content">
           <p>I love to explore and to help understand things in the universe using statistics, machine learning, and creative data storytelling. I currently lead the data team at MOME, developing knowledge platforms, internal tools, and participating science outreach whenever possible.</p>
@@ -167,8 +170,8 @@
       </div>
     </section>
 
-    <section id="projects">
-      <h2>Highlighted Projects</h2>
+    <section id="projects" aria-labelledby="about-projects">
+      <h2 id="about-projects">Highlighted Projects</h2>
       <div class="card">
         <div class="card-content">
           <h3>Constellation (2025)</h3>
@@ -212,13 +215,13 @@
           <h3>ReConnect China: A co-publication and co-patenting analysis (2023)</h3>
           <p>As part of the Horizon Europe initiative, I collaborated with the Centre for Social Innovation to investigate the evolving landscape of EU–China research collaboration. My role focused on large-scale bibliometric and network analysis, mapping scientific co-authorship and patenting trends using the Web of Science and the 2023 PATSTAT release.</p>
         </div>
-        <img src="assets/zsi.jpg" alt="Taixu portrait" />
+        <img src="assets/zsi.jpg" alt="ReConnect China" />
       </div>
     </section>
 
 
-    <section id="talks">
-      <h2>Talks & Media</h2>
+    <section id="talks" aria-labelledby="talks-heading">
+      <h2 id="talks-heading">Talks & Media</h2>
       <ul>
         <li><a href="https://www.youtube.com/watch?v=5xzS6qjgGbI" target="_blank" onclick="umami.track('day-in-life-video')">A Day in the Life at MOME</a></li>
         <li><a href="https://mome.hu/hu/emerging-technology-conference-2024" target="_blank" onclick="umami.track('emtech-conference')">Emerging Tech Conference 2024 – MOME</a></li>
@@ -227,8 +230,8 @@
       </ul>
     </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
+  <section id="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact</h2>
     <p>Feel like collaborating or chatting about sci-fi, stats, or stardust?</p>
     <button onclick="trackContact()">Get in Touch</button>
     <p id="obfuscatedContactString" style="display: none;">
@@ -241,7 +244,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Adam Radvanyi, the g_astrobiologist. Made with pre-workout, stardust & creative creatine. This page uses Umami for analytics.
+    &copy; 2025 Adam Radvanyi, the g_astrobiologist. Made with pre-workout, stardust & creative creatine. This page uses Umami for analytics. See data <a href="https://eu.umami.is/share/1jxPPoUpGzTQzx36/g-astrobiologist.github.io" target="_blank" onclick="umami.track('umami-data-click')">here</a>.
   </footer>
 
   <style>
